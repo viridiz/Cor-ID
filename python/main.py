@@ -1,8 +1,4 @@
 from utils import *
-import os
-
-
-os.system("clear")
 
 # min_n = int("1" + "00001" + "00001") # 4LDSUJL
 # max_n = int("36525" + "99999" + "99999") # 3LH24L9L33
