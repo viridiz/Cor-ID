@@ -1,0 +1,37 @@
+CorID Creation Algorithm
+
+Inputs:
+
+    Date: Number of days since January 1st, 2024.
+    Facility Number: Up to 5 digits (max 99999).
+    Patient Number: Up to 5 digits (max 99999).
+
+Steps:
+
+    Concatenate: Convert the date, facility number, and patient number to strings. Pad the facility and patient numbers to 5 digits. Concatenate the strings in this order: [Date][Facility Number][Patient Number].
+    Example: Date = 4856 (18.04.2037), Facility = 343, Patient = 1429 -> "48560034301429"
+
+    Convert to Base36: Treat the concatenated string as a decimal number and convert it to base36.
+    Example: "48560034301429" -> "H7O66N1MD"
+    Add the birth year and a letter indicating biological sex of the person.
+    Return the CorID: The resulting string is the CorID.
+
+
+Reverse Process (Decoding CorID)
+
+Input: CorID string.
+
+Steps:
+
+    Take the base36 part (the Cor-ID without the last 5 characters).
+    Convert to Decimal: Convert the base36 part back to a decimal number.
+    Example: "H7O66N1MD" -> 48560034301429
+
+    Extract Data:
+        Last 5 digits: Birth year and sex
+        Next 5 digits: Patient Number (1429)
+        Next 5 digits: Facility Number (343)
+        Remaining digits: Date (4856 days since Jan 1, 2024)
+
+    Return Data: Output the date, facility number, and patient number.
+
