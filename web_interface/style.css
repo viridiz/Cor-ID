@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.generator,
+.decoder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border: 10px 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+select {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1em;
+}
+
+button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.flatpickr-calendar {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px;
+  font-size: 14px;
+}
+
+.flatpickr-months {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  width: auto;
+}
+
+.flatpickr-months .flatpickr-month {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flatpickr-months .flatpickr-year {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.flatpickr-days {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.flatpickr-calendar .flatpickr-months {
+  box-sizing: border-box;
+  width: 100%;
+}
